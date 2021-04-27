@@ -1,0 +1,9 @@
+<!--pages/advice/advice.wxml-->
+<view class="zong">
+        <view class="yang1" wx:for="{{wishs}}" id="{{item._id}}" bindtap='details'>
+        {{item.title}}
+        </view>
+         <view class="yang2" bindtap='add' >
+        关于这次训练我想说
+        </view>
+    </view>

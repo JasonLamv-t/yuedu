@@ -1,0 +1,22 @@
+/* pages/advicecomment/advicecomment.wxss */
+.title{
+  margin-top: 100rpx;
+  font-size: 2.5em;
+  color: #ffffff;
+text-align:center; 
+}
+page{
+   background-color: #005F8C;
+}
+.date{
+   margin-top: 50rpx;
+  font-size: 1.5em;
+  color: #ffffff;
+text-align:center; 
+}
+.address{
+    margin-top: 30rpx;
+  font-size: 1em;
+  color: #ffffff;
+text-align:center; 
+}

@@ -1,0 +1,98 @@
+/* pages/articlerecommended/articlerecommended.wxss */
+page {
+  background-color: white;
+}
+
+.wrapper {
+  padding: 5px;
+}
+
+.contentinfo {
+  font-size: 1rem;
+}
+
+.iconfont {
+  display: inline-block;
+  padding: 8px 8px;
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+.toolbar {
+  box-sizing: border-box;
+  /* border: 1px solid #ccc; */
+  border-bottom: 0;
+  font-family: 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
+}
+
+
+.ql-container {
+  box-sizing: border-box;
+  padding: 12px 15px;
+  width: 100%;
+  min-height: 30vh;
+  height: auto;
+  /* border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc; */
+  background: #fff;
+  margin-top: 20px;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.ql-active {
+  color: #06c;
+}
+
+radio {
+  margin: 0 3px;
+  zoom: 0.8;
+}
+
+input {
+  border: 1px solid #00F;
+  font-size: 1rem;
+  width: 100%;
+
+}
+
+textarea {
+  border: 1px solid #00F;
+  font-size: 1rem;
+  width: 100%;
+}
+
+image {
+  height: 60rpx;
+  width: 60rpx;
+  margin-left: 30rpx;
+}
+
+.pic {
+  display: flex;
+  flex-direction: row;
+}
+
+.keyword {
+  display: flex;
+}
+
+.word {
+  /* width: min-content; */
+  width: auto;
+}
+
+switch {
+  zoom: 0.7
+}
+
+.iconfont {
+  width: 22px;
+  height: 22px;
+  font-size: 20px;
+  line-height: 20px;
+  text-align: center;
+  padding: 0;
+}

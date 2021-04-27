@@ -1,0 +1,39 @@
+<!--pages/articlerecommended/articlerecommended.wxml-->
+<view class="container">
+	<!-- <template is="head" data="{{title: 'editor'}}"/> -->
+
+	<view class="page-body">
+		<view class='wrapper'>
+			<view class="contentinfo">请输入文章标题</view>
+			<view><input bindinput='title' placeholder="请输入..." /></view>
+			<view class="contentinfo">请输入文章内容</view>
+			<view><textarea bindinput="article" maxlength="3000" /></view>
+      <view class="contentinfo" bindtap="getKeyword">关键词  点击生成</view>
+      <view class="keyword" wx:for="{{keywords}}" wx:for-item="keyword">
+      <view class="iconfont iconminus-circle" bindtap="remove" data-index="{{index}}"></view>
+      <input class="word" value="{{keyword.word}}" bindinput="typingWord" data-index="{{index}}">{{item.word}}</input>
+      <view style="margin-right: 0; margin-left: auto">
+      <radio-group class="radio-group" bindchange="typeChange" data-index="{{index}}">
+    <radio class="radio" wx:for="{{wordType}}" value="{{item.value}}" checked="{{item.value == keyword.positive}}">{{item.type}}</radio>
+  </radio-group>
+      </view>
+      </view>
+      <view class="iconfont iconplus-circle" bindtap="add" wx:if="{{keywords.length}}"></view>
+
+      <view class="contentinfo">请为学生准备一些课前思考题吧~</view>
+			<view><textarea bindinput="word" maxlength="300" /></view>
+    </view>
+  </view>
+  <view class="contentinfo">请选择文章类型</view>
+  <radio-group class="radio-group" bindchange="radioChange">
+    <radio class="radio" wx:for="{{items}}" value="{{item.name}}" checked="{{item.checked}}">{{item.value}}</radio>
+  </radio-group>
+</view>
+
+<view class='pic'>
+  <view class="contentinfo">请上传图片</view>
+  <view bindtap='picfunction'><image  class="plus" src='../../images/plus.png'></image></view>
+</view>
+
+<button type="primary" bindtap='submit'>提交</button>
+<mp-toptips show="{{error}}" msg="{{error}}" type="error" />

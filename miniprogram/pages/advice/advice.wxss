@@ -1,0 +1,39 @@
+/* pages/advice/advice.wxss */
+
+page {
+  /* background: #f6f6f6; */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+ background-color: #996666;
+
+}
+
+.zong{
+
+  display: flex;
+  flex-direction:row;
+  flex-wrap: wrap;
+  padding: 20rpx;
+  align-items: center;
+  justify-content: space-around; 
+}
+
+.yang1{
+padding: 30rpx;
+background-color: #b3b3ff;
+margin-top: 20rpx;
+border-radius:10rpx; 
+
+}
+
+.yang2{
+padding: 30rpx;
+background-color: #f1b0e6;
+margin-top: 20rpx;
+border-radius:10rpx; 
+width: 350rpx;
+color:#ffff;
+}
+
+

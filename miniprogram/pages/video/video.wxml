@@ -1,0 +1,11 @@
+<!--pages/video/video.wxml-->
+<view class="page">
+	<block wx:for="{{videoList}}" wx:key="this">
+		<navigator class="cell" url="../detail/detail?type=video&id={{item._id}}">
+			<image class="cell-img" src="{{item.img}}" mode="aspectFill"></image>
+			<view class="cell-title">{{item.title}}</view>
+			<view class="cell-right iconfont iconright"></view>
+		</navigator>
+		<mp-line></mp-line>
+	</block>
+</view>

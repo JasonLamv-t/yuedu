@@ -1,0 +1,31 @@
+<view class="logined">
+	<view class="top">
+		<view class="top1" wx:if="{{userInfo}}">
+			<view class="avatarUrl">
+				<image src="{{userInfo.avatarUrl}}" style="width:70px;height:70px;"></image>
+			</view>
+			<view class="nickName">
+				{{userInfo.nickName}}
+			</view>
+		</view>
+	</view>
+	<view class="part"></view>
+	<view class="mecontent" wx:if="{{ myAuth == 'teacher' }}">
+		<view class="mefuntion" bindtap='mefuntion'>文章推荐</view>
+	</view>
+
+	<view class="part1"></view>
+	<view class="mecontent" bindtap="setup">
+		<view class="mefuntion" bindtap='setup'>我的建议</view>
+	</view>
+
+	<view class="part1"></view>
+	<navigator url="../mystar/mystar" class="mecontent">
+		<view class="mefuntion">我的收藏</view>
+	</navigator>
+
+	<view class="part1"></view>
+	<view class="mecontent" bindtap="auth">
+		<view class="mefuntion">我的身份：{{ myAuth }}</view>
+	</view>
+</view>

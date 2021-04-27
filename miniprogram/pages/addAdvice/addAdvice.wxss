@@ -1,0 +1,13 @@
+/* pages/addAdvice/addAdvice.wxss */
+.in{
+  border: 1px solid #ffffff;
+}
+.title{
+  margin-top: 20rpx;
+  margin-bottom: 20rpx;
+  color: #b3b3ff;
+
+}
+page{
+   background-color: #996666;
+}

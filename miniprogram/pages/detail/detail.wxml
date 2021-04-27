@@ -1,0 +1,49 @@
+<!--pages/article/detail.wxml-->
+<!-- 标题和描述 -->
+<view class="warp">
+	<view>
+		<view class="title">{{title}}</view>
+		<view class="img" wx:if="{{type == 'article'}}">
+			<image src="{{img}}" class="in-img" background-size="cover" model="scaleToFill"></image>
+		</view>
+		<view class="word" wx:if="{{word != ''}}">
+			<view class="xj">课前思考：</view>{{word}}
+		</view>
+		<video src='{{video}}' class='video' wx:else></video>
+		<view class="xj">文章阅读：</view>
+		<view class="content">{{article}}</view>
+
+
+		<view class="xj">关键词</view>
+		<view class="keywords" wx:if="{{keywords != ''}}">
+			<text wx:for="{{keywords}}">{{item.word}}; </text>
+		</view>
+
+		
+	</view>
+
+	<!-- 评论 -->
+	<view class="xj">评论区域</view>
+	<block wx:for="{{comments}}" wx:key="index" wx:for-index="idx">
+		<view class="pinglunItem" bindtap="setReply" data-user="{{item.name}}" data-index="{{idx}}">
+			<text style="background: {{item.score == 0? 'blue':item.score > 0? 'yellow':'red'}}" wx:if="{{myAuth == 'teacher'}}">{{item.name}}：</text>
+			<text wx:else>{{item.name}}：</text>
+			<text>{{item.detail}}</text>
+		</view>
+		<view class="pinglunItem" style="margin-left: 20px" wx:for="{{item.reply}}" bindtap="setReply" data-user="{{item.username1}}" data-index="{{idx}}">
+			<text>{{item.username1}}回复{{item.username2}}：</text>
+			<text>{{item.detail}}</text>
+		</view>
+	</block>
+
+
+</view>
+<!-- 底部 -->
+<view class="bottom">
+	<view class="icon iconfont {{isLike? 'iconlike-fill':'iconlike'}}" style="margin-left: 10px" bindtap="like"></view>
+	<view class="icon iconfont {{isStar? 'iconstar-fill':'iconstar'}}" style="margin-right: 10px" bindtap="star"></view>
+	<input type="text" bindinput="typing" placeholder="{{username == ''? '发表评论':'回复'+username}}" bindblur="blur" focus="{{username != ''}}" maxlength = "-1" ></input>
+	<button size="mini" type="primary" style="width: 70px; line-height: 40px;" bindtap="{{username == ''? 'sendComment':'sendReply'}}">发送</button>
+</view>
+
+<mp-toptips show="{{error}}" msg="{{error}}" type="error" />

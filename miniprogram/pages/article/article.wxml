@@ -1,0 +1,49 @@
+<!--pages/article/article.wxml-->
+<view class="page">
+	<mp-tabs tabs="{{tabs}}" activeTab="{{activeTab}}" tab-underline-color="#424ea9" tab-class="tabs" swiperStyle="height: {{swiperHeight}}px" bindtabclick="onTabCLick" bindchange="onChange" activeClass="tab-bar-title__selected">
+		<!-- 推荐 -->
+		<scroll-view scroll-y="true" style="height: {{swiperHeight}}px" enable-back-to-top slot="tab-content-0" style="padding-top: 3px">
+			<block wx:for="{{recommend}}" wx:key="this">
+				<navigator class="cell" url="../detail/detail?type=article&id={{item._id}}">
+					<image class="cell-img" src="{{item.img}}" mode="aspectFill"></image>
+					<view class="cell-title">{{item.title}}</view>
+					<view class="cell-right iconfont iconright"></view>
+				</navigator>
+				<mp-line></mp-line>
+			</block>
+		</scroll-view>
+		<!-- 人文环境 -->
+		<scroll-view scroll-y="true" style="height: {{swiperHeight}}px" enable-back-to-top slot="tab-content-1" style="padding-top: 6px">
+			<block wx:for="{{humanities}}" wx:key="this">
+				<navigator class="cell" url="../detail/detail?type=article&id={{item._id}}">
+					<image class="cell-img" src="{{item.img}}" mode="aspectFill"></image>
+					<view class="cell-title">{{item.title}}</view>
+					<view class="cell-right iconfont iconright"></view>
+				</navigator>
+				<mp-line></mp-line>
+			</block>
+		</scroll-view>
+		<!-- 传统文化 -->
+		<scroll-view scroll-y="true" style="height: {{swiperHeight}}px" enable-back-to-top slot="tab-content-2" style="padding-top: 6px">
+			<block wx:for="{{culture}}" wx:key="this">
+				<navigator class="cell" url="../detail/detail?type=article&id={{item._id}}">
+					<image class="cell-img" src="{{item.img}}" mode="aspectFill"></image>
+					<view class="cell-title">{{item.title}}</view>
+					<view class="cell-right iconfont iconright"></view>
+				</navigator>
+				<mp-line></mp-line>
+			</block>
+		</scroll-view>
+		<!-- 科学技术 -->
+		<scroll-view scroll-y="true" style="height: {{swiperHeight}}px" enable-back-to-top slot="tab-content-3" style="padding-top: 6px">
+			<block wx:for="{{tech}}" wx:key="this">
+				<navigator class="cell" url="../detail/detail?type=article&id={{item._id}}">
+					<image class="cell-img" src="{{item.img}}" mode="aspectFill"></image>
+					<view class="cell-title">{{item.title}}</view>
+					<view class="cell-right iconfont iconright"></view>
+				</navigator>
+				<mp-line></mp-line>
+			</block>
+		</scroll-view>
+	</mp-tabs>
+</view>

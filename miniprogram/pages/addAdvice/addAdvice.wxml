@@ -1,0 +1,21 @@
+<!--pages/addAdvice/addAdvice.wxml-->
+<view class='title'>
+<view>请输入您的建议</view> 
+<view><input class='in' auto-focus bindinput="title"></input></view>
+</view>
+
+<view class='title'>
+<view>时间</view>
+<picker mode="date" value='{{date}}' start="2020-08-01" end="2022-08-08" bindchange='date'>
+<view class='in'>{{date}}</view>
+</picker></view>
+
+<view class='title'>
+<view>地点</view>
+ <picker mode="region" bindchange="bindRegionChange" value="{{region}}" custom-item="{{customItem}}">
+<view class="in">
+      {{region[0]}}，{{region[1]}}，{{region[2]}}
+    </view>
+</picker></view>
+<view class="title"></view>
+<button type="primary" bindtap="add" > 提交建议 </button>

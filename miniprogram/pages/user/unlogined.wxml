@@ -1,0 +1,6 @@
+<!--miniprogram/pages/user/unlogined.wxml-->
+<view class="top">
+  <button open-type="getUserInfo" bindgetuserinfo="getUserInfo" type="primary">立即登陆</button>
+</view>
+
+<mp-toptips msg="{{error}}" type="error" show="{{error}}"></mp-toptips>

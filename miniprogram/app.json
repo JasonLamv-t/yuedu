@@ -1,0 +1,56 @@
+{
+  "pages": [
+    "pages/article/article",
+    "pages/video/video",
+    "pages/oldExams/oldExams",
+    "pages/detail/detail",
+    "pages/articlerecommended/articlerecommended",
+    "pages/advice/advice",
+    "pages/advicecomment/advicecomment",
+    "pages/addAdvice/addAdvice",
+    "pages/user/user",
+    "pages/mystar/mystar",
+    "pages/user/unlogined"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#E0EEE0",
+    "navigationBarTitleText": "悦读",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/article/article",
+        "text": "每日好文",
+        "iconPath": "images/tabs-icon/yuedu-no.png",
+        "selectedIconPath": "images/tabs-icon/yuedu-yes.png"
+      },
+      {
+        "pagePath": "pages/video/video",
+        "text": "每日视频",
+        "iconPath": "images/tabs-icon/video-no.png",
+        "selectedIconPath": "images/tabs-icon/video-yes.png"
+      },
+      {
+        "pagePath": "pages/oldExams/oldExams",
+        "text": "真题与原文",
+        "iconPath": "images/tabs-icon/zhenti-no.png",
+        "selectedIconPath": "images/tabs-icon/zhenti-yes.png"
+      },
+      {
+        "pagePath": "pages/user/user",
+        "text": "个人中心",
+        "iconPath": "images/tabs-icon/personal-no.png",
+        "selectedIconPath": "images/tabs-icon/personal-yes.png"
+      }
+    ]
+  },
+  "usingComponents": {
+    "mp-tabs": "weui/tabs/index",
+    "mp-line": "weui/line/line",
+    "mp-toptips": "weui/toptips/toptips"
+  },
+  "sitemapLocation": "sitemap.json",
+  "style": "v2"
+}

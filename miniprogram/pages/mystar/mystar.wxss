@@ -1,0 +1,2 @@
+/* pages/mystar/mystar.wxss */
+@import "../article/article.wxss";

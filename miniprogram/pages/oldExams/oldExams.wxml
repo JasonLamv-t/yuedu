@@ -1,0 +1,11 @@
+<!--pages/oldExams/oldExams.wxml-->
+
+<view class="page">
+	<block wx:for="{{oldExamList}}" wx:key="this">
+		<navigator class="cell" url="../Examination/Examination?type=video&id={{item._id}}">
+			<view class="cell-title">{{item.title}}</view>
+			<view class="cell-right iconfont iconright"></view>
+		</navigator>
+		<mp-line></mp-line>
+	</block>
+</view>

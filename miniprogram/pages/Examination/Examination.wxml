@@ -1,0 +1,17 @@
+<!--pages/Examination/Examination.wxml-->
+<!--pages/zhentineirong/zhentineirong.wxml-->
+
+<!-- 标题和描述 -->
+<!-- <view class="pages">
+  <image src="cloud://yuedu-5k1su.7975-yuedu-5k1su-1301672368/paper2.png"></image>
+   <image src="cloud://yuedu-5k1su.7975-yuedu-5k1su-1301672368/paper3.png"></image>
+    <image src="cloud://yuedu-5k1su.7975-yuedu-5k1su-1301672368/paper4.png"></image>
+    <image src="cloud://yuedu-5k1su.7975-yuedu-5k1su-1301672368/paper5.png"></image>
+    <image src="cloud://yuedu-5k1su.7975-yuedu-5k1su-1301672368/paper6.png"></image>
+    <image src="cloud://yuedu-5k1su.7975-yuedu-5k1su-1301672368/paper7.png"></image>
+</view> -->
+<!-- 标题和描述 -->
+<view >
+ <view>{{detail.title}}</view>
+ <view>{{detail.article}}</view>
+</view>

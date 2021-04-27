@@ -1,0 +1,10 @@
+<!--pages/mystar/mystar.wxml-->
+
+<block wx:for="{{list}}" wx:key="this">
+	<navigator class="cell" url="../detail/detail?type=article&id={{item._id}}">
+		<image class="cell-img" src="{{item.img}}" mode="aspectFill"></image>
+		<view class="cell-title">{{item.title}}</view>
+		<view class="cell-right iconfont iconright"></view>
+	</navigator>
+	<mp-line></mp-line>
+</block>
